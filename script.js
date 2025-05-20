@@ -1,47 +1,49 @@
-//complete this code
+// Complete this code
 class Person {
-	let name;
-	let age;
-	Person(String name, Number age){
-		this.name=name;
-		this.age=age;
-	}
+  constructor(name, age) {
+    this._name = name;
+    this._age = age;
+  }
 
-	get name(name){
-		return this.name;
-	}
-	get age(age){
-		return this.age;
-	}
-	set name(newName){
-		this.name = newName;
-	}
-	set age(newAge){
-		this.age = newAge;
-	}
+  get name() {
+    return this._name;
+  }
+
+  set name(newName) {
+    this._name = newName;
+  }
+
+  get age() {
+    return this._age;
+  }
+
+  set age(newAge) {
+    this._age = newAge;
+  }
 }
 
 class Student extends Person {
-	function study(){
-		console.log(name + " is studying");
-	}
+  study() {
+    console.log(this.name + " is studying");
+  }
 }
 
 class Teacher extends Person {
-	function teach(){
-		console.log(name + " is teaching");
-	}
+  teach() {
+    console.log(this.name + " is teaching");
+  }
 }
 
-const person new Person("John", 25);
+// Test object creation (optional for local testing)
+const person = new Person("John", 25);
 console.log(person.name);
 person.age = 30;
 console.log(person.age);
 
-const student = new Student("Anas" , 17);
+const student = new Student("Anas", 17);
 student.study();
 
-const teacher = new Teacher("Zahid" , 28);
+const teacher = new Teacher("Zahid", 28);
 teacher.teach();
 
 // Do not change the code below this line
